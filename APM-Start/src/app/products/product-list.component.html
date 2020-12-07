@@ -41,11 +41,9 @@
                    [src]='product.imageUrl'
                    [title]='product.productName' style="width: 20%;">
             </td>
-            <td>
-              
-                {{ product.productName }}
-              
-            </td>
+            <a [routerLink]="['/products', product.productId]">
+              {{ product.productName }}
+            </a>
             <td>{{ product.productCode | lowercase}}</td>
             <td>{{ product.releaseDate }}</td>
             <td>{{ product.price | currency:'USD':'symbol':'1.2-2' }}</td>
